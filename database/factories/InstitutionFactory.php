@@ -21,7 +21,7 @@ class InstitutionFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
+            'name' => fake()->company(),
             'logo' => fake()->regexify('[A-Za-z0-9]{255}'),
         ];
     }

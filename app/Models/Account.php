@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\AccountType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -34,6 +35,7 @@ class Account extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'type' => AccountType::class,
         'balance' => 'decimal:2',
         'interest_rate' => 'decimal:2',
         'user_id' => 'integer',

@@ -15,9 +15,12 @@ return new class extends Migration
 
         Schema::create('category_groups', function (Blueprint $table) {
             $table->id();
+
             $table->string('name', 100);
-            $table->string('color', 50);
+            $table->string('color', 50)->nullable();
+
             $table->foreignId('user_id')->constrained();
+
             $table->timestamps();
             $table->softDeletes();
         });

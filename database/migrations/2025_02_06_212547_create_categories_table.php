@@ -15,11 +15,13 @@ return new class extends Migration
 
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+
             $table->string('name', 100);
             $table->string('color', 50);
+
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('group_id')->constrained('category_groups');
-            $table->foreignId('category_group_id');
+            $table->foreignId('category_group_id')->constrained('category_groups');
+
             $table->timestamps();
             $table->softDeletes();
         });

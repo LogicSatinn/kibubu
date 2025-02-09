@@ -15,14 +15,17 @@ return new class extends Migration
 
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
+
             $table->string('name', 100);
             $table->string('type', 100);
             $table->string('account_number', 50);
             $table->decimal('balance', 12, 2);
             $table->decimal('interest_rate', 5, 2)->nullable();
             $table->mediumText('description')->nullable();
+
             $table->foreignId('user_id')->constrained();
             $table->foreignId('institution_id')->constrained();
+
             $table->timestamps();
             $table->softDeletes();
         });

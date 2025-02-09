@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac7d7073cdadf0069881eabfa0c37574",
+    "content-hash": "de49f1efb61fd2c6c5a8efa4d5620771",
     "packages": [
         {
             "name": "brick/math",
@@ -134,6 +134,78 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
+        },
+        {
+            "name": "cerbero/enum",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cerbero90/enum.git",
+                "reference": "427786f8331c11ca07664fd1b677265026f31e85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cerbero90/enum/zipball/427786f8331c11ca07664fd1b677265026f31e85",
+                "reference": "427786f8331c11ca07664fd1b677265026f31e85",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "pestphp/pest": "^2.0",
+                "phpstan/phpstan": "^2.0",
+                "scrutinizer/ocular": "^1.9",
+                "squizlabs/php_codesniffer": "^3.0",
+                "tightenco/duster": "^2.0"
+            },
+            "bin": [
+                "bin/enum"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "helpers/core.php",
+                    "helpers/cli.php"
+                ],
+                "psr-4": {
+                    "Cerbero\\Enum\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrea Marco Sartori",
+                    "email": "andrea.marco.sartori@gmail.com",
+                    "homepage": "https://github.com/cerbero90",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Zero-dependencies package to supercharge enum functionalities.",
+            "homepage": "https://github.com/cerbero90/enum",
+            "keywords": [
+                "enum",
+                "enumeration"
+            ],
+            "support": {
+                "issues": "https://github.com/cerbero90/enum/issues",
+                "source": "https://github.com/cerbero90/enum/tree/2.3.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/cerbero90",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-01-30T14:58:56+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

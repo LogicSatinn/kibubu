@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\AccountType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Account;
@@ -23,11 +24,11 @@ class AccountFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'type' => fake()->regexify('[A-Za-z0-9]{100}'),
-            'account_number' => fake()->regexify('[A-Za-z0-9]{50}'),
+            'name' => fake()->randomElement(['Savings Account', 'Checking Account', 'M-Pesa', 'Airtel Money']),
+            'type' => fake()->randomElement(AccountType::class),
+            'account_number' => fake()->numberBetween(int1: 100000000, int2: 99999999999999999),
             'balance' => fake()->randomFloat(2, 0, 9999999999.99),
-            'interest_rate' => fake()->randomFloat(2, 0, 999.99),
+            'interest_rate' => fake()->randomFloat(2, 0, 99.99),
             'description' => fake()->text(),
             'user_id' => User::factory(),
             'institution_id' => Institution::factory(),

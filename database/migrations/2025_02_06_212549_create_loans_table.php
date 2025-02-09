@@ -15,6 +15,7 @@ return new class extends Migration
 
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
+
             $table->string('name', 100);
             $table->string('type', 100);
             $table->date('opened_on');
@@ -23,8 +24,10 @@ return new class extends Migration
             $table->decimal('principal', 12, 2);
             $table->decimal('interest_rate', 5, 2);
             $table->mediumText('description')->nullable();
+
             $table->foreignId('user_id')->constrained();
             $table->foreignId('institution_id')->constrained();
+
             $table->timestamps();
             $table->softDeletes();
         });

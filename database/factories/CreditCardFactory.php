@@ -24,8 +24,8 @@ class CreditCardFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'brand' => fake()->regexify('[A-Za-z0-9]{50}'),
-            'interest_rate' => fake()->randomFloat(2, 0, 999.99),
+            'brand' => fake()->company(),
+            'interest_rate' => fake()->randomFloat(2, 0, 99.99),
             'credit_limit' => fake()->randomFloat(2, 0, 9999999999.99),
             'balance' => fake()->randomFloat(2, 0, 9999999999.99),
             'description' => fake()->text(),
