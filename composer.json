@@ -11,6 +11,7 @@
     "require": {
         "php": "^8.2",
         "cerbero/enum": "^2.3",
+        "inertiajs/inertia-laravel": "^2.0",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9"
     },
