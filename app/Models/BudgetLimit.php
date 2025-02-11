@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class BudgetLimit extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -17,11 +16,12 @@ class Category extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
-        'color',
+        'amount',
+        'currency',
+        'start_date',
+        'end_date',
+        'budget_id',
         'user_id',
-        'group_id',
-        'category_group_id',
     ];
 
     /**
@@ -31,9 +31,11 @@ class Category extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'amount' => 'decimal:2',
+        'start_date' => 'date',
+        'end_date' => 'date',
+        'budget_id' => 'integer',
         'user_id' => 'integer',
-        'group_id' => 'integer',
-        'category_group_id' => 'integer',
     ];
 
     public function user(): BelongsTo
@@ -41,13 +43,8 @@ class Category extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function categoryGroup(): BelongsTo
+    public function budget(): BelongsTo
     {
-        return $this->belongsTo(CategoryGroup::class);
-    }
-
-    public function group(): BelongsTo
-    {
-        return $this->belongsTo(CategoryGroup::class);
+        return $this->belongsTo(Budget::class);
     }
 }

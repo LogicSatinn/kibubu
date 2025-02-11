@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class Budget extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -18,10 +19,9 @@ class Category extends Model
      */
     protected $fillable = [
         'name',
-        'color',
+        'period',
+        'active',
         'user_id',
-        'group_id',
-        'category_group_id',
     ];
 
     /**
@@ -31,9 +31,8 @@ class Category extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'active' => 'boolean',
         'user_id' => 'integer',
-        'group_id' => 'integer',
-        'category_group_id' => 'integer',
     ];
 
     public function user(): BelongsTo
@@ -41,13 +40,13 @@ class Category extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function categoryGroup(): BelongsTo
+    public function autoBudgets(): HasMany
     {
-        return $this->belongsTo(CategoryGroup::class);
+        return $this->hasMany(AutoBudget::class);
     }
 
-    public function group(): BelongsTo
+    public function budgetLimits(): HasMany
     {
-        return $this->belongsTo(CategoryGroup::class);
+        return $this->hasMany(BudgetLimit::class);
     }
 }
