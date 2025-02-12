@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\Period;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Budget;
@@ -22,9 +23,13 @@ class BudgetLimitFactory extends Factory
      */
     public function definition(): array
     {
+        $period = Period::WEEKLY;
+
+
+
         return [
             'amount' => fake()->randomFloat(2, 0, 999999999.99),
-            'currency' => fake()->regexify('[A-Za-z0-9]{3}'),
+            'currency' => 'TZS',
             'start_date' => fake()->date(),
             'end_date' => fake()->date(),
             'budget_id' => Budget::factory(),

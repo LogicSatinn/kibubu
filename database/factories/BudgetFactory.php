@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\Period;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Budget;
@@ -23,8 +24,8 @@ class BudgetFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'period' => fake()->word(),
-            'active' => fake()->boolean(),
+            'period' => fake()->randomElement(Period::class),
+            'active' => fake()->boolean(chanceOfGettingTrue: 90),
             'user_id' => User::factory(),
         ];
     }
