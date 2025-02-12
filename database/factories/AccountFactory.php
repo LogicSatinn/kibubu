@@ -1,13 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories;
 
 use App\Enums\AccountType;
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Account;
 use App\Models\Institution;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AccountFactory extends Factory
 {

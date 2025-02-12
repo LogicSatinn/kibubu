@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature\Http\Controllers;
 
 use App\Models\Account;
@@ -30,7 +32,6 @@ final class AccountControllerTest extends TestCase
         $response->assertViewHas('accounts');
     }
 
-
     #[Test]
     public function create_displays_view(): void
     {
@@ -39,7 +40,6 @@ final class AccountControllerTest extends TestCase
         $response->assertOk();
         $response->assertViewIs('account.create');
     }
-
 
     #[Test]
     public function store_uses_form_request_validation(): void
@@ -85,7 +85,6 @@ final class AccountControllerTest extends TestCase
         $response->assertSessionHas('account.id', $account->id);
     }
 
-
     #[Test]
     public function show_displays_view(): void
     {
@@ -98,7 +97,6 @@ final class AccountControllerTest extends TestCase
         $response->assertViewHas('account');
     }
 
-
     #[Test]
     public function edit_displays_view(): void
     {
@@ -110,7 +108,6 @@ final class AccountControllerTest extends TestCase
         $response->assertViewIs('account.edit');
         $response->assertViewHas('account');
     }
-
 
     #[Test]
     public function update_uses_form_request_validation(): void
@@ -154,7 +151,6 @@ final class AccountControllerTest extends TestCase
         $this->assertEquals($user->id, $account->user_id);
         $this->assertEquals($institution->id, $account->institution_id);
     }
-
 
     #[Test]
     public function destroy_deletes_and_redirects(): void

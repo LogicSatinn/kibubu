@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\CreditCard;
 use App\Models\Institution;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CreditCardFactory extends Factory
 {

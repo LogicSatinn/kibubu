@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature\Http\Controllers;
 
 use App\Models\CreditCard;
@@ -30,7 +32,6 @@ final class CreditCardControllerTest extends TestCase
         $response->assertViewHas('creditCards');
     }
 
-
     #[Test]
     public function create_displays_view(): void
     {
@@ -39,7 +40,6 @@ final class CreditCardControllerTest extends TestCase
         $response->assertOk();
         $response->assertViewIs('creditCard.create');
     }
-
 
     #[Test]
     public function store_uses_form_request_validation(): void
@@ -88,7 +88,6 @@ final class CreditCardControllerTest extends TestCase
         $response->assertSessionHas('creditCard.id', $creditCard->id);
     }
 
-
     #[Test]
     public function show_displays_view(): void
     {
@@ -101,7 +100,6 @@ final class CreditCardControllerTest extends TestCase
         $response->assertViewHas('creditCard');
     }
 
-
     #[Test]
     public function edit_displays_view(): void
     {
@@ -113,7 +111,6 @@ final class CreditCardControllerTest extends TestCase
         $response->assertViewIs('creditCard.edit');
         $response->assertViewHas('creditCard');
     }
-
 
     #[Test]
     public function update_uses_form_request_validation(): void
@@ -160,7 +157,6 @@ final class CreditCardControllerTest extends TestCase
         $this->assertEquals($user->id, $creditCard->user_id);
         $this->assertEquals($institution->id, $creditCard->institution_id);
     }
-
 
     #[Test]
     public function destroy_deletes_and_redirects(): void

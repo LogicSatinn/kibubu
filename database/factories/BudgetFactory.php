@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories;
 
 use App\Enums\Period;
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Budget;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class BudgetFactory extends Factory
 {

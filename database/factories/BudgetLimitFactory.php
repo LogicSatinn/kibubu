@@ -1,13 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Factories;
 
 use App\Enums\Period;
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Budget;
 use App\Models\BudgetLimit;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class BudgetLimitFactory extends Factory
 {
@@ -24,8 +25,6 @@ class BudgetLimitFactory extends Factory
     public function definition(): array
     {
         $period = Period::WEEKLY;
-
-
 
         return [
             'amount' => fake()->randomFloat(2, 0, 999999999.99),

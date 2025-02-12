@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature\Http\Controllers;
 
 use App\Models\Institution;
@@ -31,7 +33,6 @@ final class LoanControllerTest extends TestCase
         $response->assertViewHas('loans');
     }
 
-
     #[Test]
     public function create_displays_view(): void
     {
@@ -40,7 +41,6 @@ final class LoanControllerTest extends TestCase
         $response->assertOk();
         $response->assertViewIs('loan.create');
     }
-
 
     #[Test]
     public function store_uses_form_request_validation(): void
@@ -92,7 +92,6 @@ final class LoanControllerTest extends TestCase
         $response->assertSessionHas('loan.id', $loan->id);
     }
 
-
     #[Test]
     public function show_displays_view(): void
     {
@@ -105,7 +104,6 @@ final class LoanControllerTest extends TestCase
         $response->assertViewHas('loan');
     }
 
-
     #[Test]
     public function edit_displays_view(): void
     {
@@ -117,7 +115,6 @@ final class LoanControllerTest extends TestCase
         $response->assertViewIs('loan.edit');
         $response->assertViewHas('loan');
     }
-
 
     #[Test]
     public function update_uses_form_request_validation(): void
@@ -167,7 +164,6 @@ final class LoanControllerTest extends TestCase
         $this->assertEquals($user->id, $loan->user_id);
         $this->assertEquals($institution->id, $loan->institution_id);
     }
-
 
     #[Test]
     public function destroy_deletes_and_redirects(): void

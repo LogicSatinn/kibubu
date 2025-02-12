@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature\Http\Controllers;
 
 use App\Models\Institution;
@@ -27,7 +29,6 @@ final class InstitutionControllerTest extends TestCase
         $response->assertViewIs('institutions.index');
         $response->assertViewHas('institutions');
     }
-
 
     #[Test]
     public function store_uses_form_request_validation(): void

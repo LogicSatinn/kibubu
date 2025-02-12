@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\CategoryGroup;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use App\Models\Category;
 
 class CategoryGroupSeeder extends Seeder
 {
@@ -47,7 +49,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Income',
-            'color' => 'green'
+            'color' => 'green',
         ]);
 
         $group->categories()->saveMany([
@@ -70,7 +72,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Housing',
-            'color' => 'purple'
+            'color' => 'purple',
         ]);
 
         $group->categories()->saveMany([
@@ -90,7 +92,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Home Services',
-            'color' => 'orange'
+            'color' => 'orange',
         ]);
 
         $group->categories()->saveMany([
@@ -106,7 +108,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Utilities',
-            'color' => 'gray'
+            'color' => 'gray',
         ]);
 
         $group->categories()->saveMany([
@@ -126,7 +128,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Household Items',
-            'color' => 'gray'
+            'color' => 'gray',
         ]);
 
         $group->categories()->saveMany([
@@ -147,7 +149,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Food',
-            'color' => 'blue'
+            'color' => 'blue',
         ]);
 
         $group->categories()->saveMany([
@@ -167,7 +169,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Transportation',
-            'color' => 'pink'
+            'color' => 'pink',
         ]);
 
         $group->categories()->saveMany([
@@ -191,7 +193,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Medical/Health',
-            'color' => 'red'
+            'color' => 'red',
         ]);
 
         $group->categories()->saveMany([
@@ -214,7 +216,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Insurance',
-            'color' => 'red'
+            'color' => 'red',
         ]);
 
         $group->categories()->saveMany([
@@ -231,7 +233,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Kids',
-            'color' => 'blue'
+            'color' => 'blue',
         ]);
 
         $group->categories()->saveMany([
@@ -257,7 +259,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Pets',
-            'color' => 'blue'
+            'color' => 'blue',
         ]);
 
         $group->categories()->saveMany([
@@ -276,7 +278,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Subscriptions',
-            'color' => 'red'
+            'color' => 'red',
         ]);
 
         $group->categories()->saveMany([
@@ -295,7 +297,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Personal Care',
-            'color' => 'pink'
+            'color' => 'pink',
         ]);
 
         $group->categories()->saveMany([
@@ -318,7 +320,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Personal Development',
-            'color' => 'blue'
+            'color' => 'blue',
         ]);
 
         $group->categories()->saveMany([
@@ -336,7 +338,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Financial/Professional Fees',
-            'color' => 'red'
+            'color' => 'red',
         ]);
 
         $group->categories()->saveMany([
@@ -352,7 +354,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Recreation/Fun',
-            'color' => 'green'
+            'color' => 'green',
         ]);
 
         $group->categories()->saveMany([
@@ -371,7 +373,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Travel',
-            'color' => 'purple'
+            'color' => 'purple',
         ]);
 
         $group->categories()->saveMany([
@@ -389,7 +391,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Technology',
-            'color' => 'blue'
+            'color' => 'blue',
         ]);
 
         $group->categories()->saveMany([
@@ -407,7 +409,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Gifts',
-            'color' => 'red'
+            'color' => 'red',
         ]);
 
         $group->categories()->saveMany([
@@ -429,7 +431,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Charitable Giving',
-            'color' => 'pink'
+            'color' => 'pink',
         ]);
 
         $group->categories()->saveMany([
@@ -447,7 +449,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Savings Goals/Investing',
-            'color' => 'green'
+            'color' => 'green',
         ]);
 
         $group->categories()->saveMany([
@@ -467,7 +469,7 @@ class CategoryGroupSeeder extends Seeder
         $group = CategoryGroup::create([
             'user_id' => $this->user->id,
             'name' => 'Debt Payments',
-            'color' => 'red'
+            'color' => 'red',
         ]);
 
         $group->categories()->saveMany([

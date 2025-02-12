@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Enums;
 
 use Cerbero\Enum\Concerns\Enumerates;
@@ -15,7 +17,7 @@ enum AutoBudgetType: int
 
     public function description(): string
     {
-        return match($this) {
+        return match ($this) {
             self::NONE => 'None',
             self::RESETS_PERIODICALLY => 'Sets a fixed amount every period',
             self::GROWS_PERIODICALLY => 'Stack up budget savings every period',
