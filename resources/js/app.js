@@ -1,5 +1,6 @@
-import { createInertiaApp } from '@inertiajs/svelte';
+import "../css/app.css";
 import { mount } from 'svelte';
+import { createInertiaApp } from '@inertiajs/svelte';
 
 createInertiaApp({
     resolve: name => {

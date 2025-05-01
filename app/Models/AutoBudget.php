@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Enums\AutoBudgetType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -33,6 +34,7 @@ class AutoBudget extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'type' => AutoBudgetType::class,
         'amount' => 'decimal:2',
         'budget_id' => 'integer',
         'user_id' => 'integer',
