@@ -22,7 +22,7 @@ class BudgetController extends Controller
 
     public function store(NewBudgetRequest $request): RedirectResponse
     {
-        $budget = $this->newBudgetAction->execute(request: $request);
+        $budget = $this->newBudgetAction->execute(request: $request, user: $request->user());
 
         return redirect()->route('budgets.create');
     }

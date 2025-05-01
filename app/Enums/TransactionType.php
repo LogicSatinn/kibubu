@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Apps\Enums;
+namespace App\Enums;
 
 enum TransactionType: string
 {
