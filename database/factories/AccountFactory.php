@@ -31,6 +31,17 @@ class AccountFactory extends Factory
             'balance' => fake()->randomFloat(2, 0, 9999999999.99),
             'interest_rate' => fake()->randomFloat(2, 0, 99.99),
             'description' => fake()->text(),
+
+            // Loan
+            'opened_on' => fake()->date(),
+            'expected_closure_date' => fake()->dateTimeBetween(startDate: 'now', endDate: '+2 years'),
+            'remaining_balance' => fake()->randomFloat(2, 0, 9999999999.99),
+            'principal' => fake()->randomFloat(2, 0, 9999999999.99),
+
+            // Credit Card
+            'brand' => fake()->company(),
+            'credit_limit' => fake()->randomFloat(2, 0, 9999999999.99),
+
             'user_id' => User::factory(),
             'institution_id' => Institution::factory(),
         ];

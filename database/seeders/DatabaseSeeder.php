@@ -22,6 +22,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        new CategoryGroupSeeder(user: $user)->run();
+        new AccountSeeder(user: $user)->run();
     }
 }

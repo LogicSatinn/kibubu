@@ -19,14 +19,26 @@ return new class() extends Migration
             $table->id();
 
             $table->string('name', 100);
-            $table->string('type', 100);
-            $table->string('account_number', 50);
-            $table->decimal('balance', 12, 2);
+            $table->boolean('auto_generated')->default(false);
+            $table->string('color', 50)->nullable();
+            $table->string('account_number', 50)->nullable();
             $table->decimal('interest_rate', 5, 2)->nullable();
             $table->mediumText('description')->nullable();
 
+            // Loans only
+            $table->date('opened_on')->nullable();
+            $table->date('expected_closure_date')->nullable();
+            $table->decimal('principal', 12, 2)->nullable();
+
+            // Credit Cards only
+            $table->string('brand', 50)->nullable();
+            $table->decimal('credit_limit', 12, 2)->nullable();
+
+            $table->decimal('balance', 12, 2)->default(0);
+
+            $table->foreignId('account_category_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('institution_id')->constrained();
+            $table->foreignId('institution_id')->nullable()->constrained();
 
             $table->timestamps();
             $table->softDeletes();

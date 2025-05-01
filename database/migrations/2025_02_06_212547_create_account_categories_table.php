@@ -13,21 +13,17 @@ return new class() extends Migration
      */
     public function up(): void
     {
-        Schema::disableForeignKeyConstraints();
-
-        Schema::create('category_groups', function (Blueprint $table): void {
+        Schema::create('account_categories', function (Blueprint $table): void {
             $table->id();
 
-            $table->string('name', 100);
-            $table->string('color', 50)->nullable();
+            $table->string(column: 'name', length: 100);
+            $table->string(column: 'type', length: 50);
+            $table->string(column: 'color', length: 50);
 
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained('users');
 
             $table->timestamps();
-            $table->softDeletes();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -35,6 +31,6 @@ return new class() extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('category_groups');
+        Schema::dropIfExists('account_categories');
     }
 };
