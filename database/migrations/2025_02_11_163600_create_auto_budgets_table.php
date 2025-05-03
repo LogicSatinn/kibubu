@@ -17,11 +17,15 @@ return new class() extends Migration
 
         Schema::create('auto_budgets', function (Blueprint $table): void {
             $table->id();
+            $table->ulid();
+
             $table->integer('type');
             $table->decimal('amount', 11, 2);
             $table->string('period', 50);
+
             $table->foreignId('budget_id')->constrained();
             $table->foreignId('user_id')->constrained();
+
             $table->timestamps();
             $table->softDeletes();
         });

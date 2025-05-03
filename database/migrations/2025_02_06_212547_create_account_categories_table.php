@@ -15,6 +15,7 @@ return new class() extends Migration
     {
         Schema::create('account_categories', function (Blueprint $table): void {
             $table->id();
+            $table->ulid();
 
             $table->string(column: 'name', length: 100);
             $table->string(column: 'type', length: 50);

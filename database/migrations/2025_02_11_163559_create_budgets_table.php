@@ -17,10 +17,13 @@ return new class() extends Migration
 
         Schema::create('budgets', function (Blueprint $table): void {
             $table->id();
+            $table->ulid();
+
             $table->string('name', 50);
             $table->string('period');
             $table->boolean('active');
             $table->foreignId('user_id')->constrained();
+
             $table->timestamps();
             $table->softDeletes();
         });

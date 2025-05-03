@@ -5,14 +5,19 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Enums\AccountType;
+use App\Models\Concerns\BelongsToInstitution;
+use App\Models\Concerns\BelongsToUser;
+use App\Models\Contracts\CanBelongToInstitution;
+use App\Models\Contracts\CanBelongToUser;
+use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Account extends Model
+class Account extends Model implements CanBelongToUser, CanBelongToInstitution
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, HasUlids, BelongsToUser, BelongsToInstitution;
 
     /**
      * The attributes that are mass assignable.
@@ -20,6 +25,7 @@ class Account extends Model
      * @var array
      */
     protected $fillable = [
+        'ulid',
         'name',
         'color',
         'auto_generated',
@@ -58,18 +64,18 @@ class Account extends Model
         'account_category_id' => 'integer',
     ];
 
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    public function institution(): BelongsTo
-    {
-        return $this->belongsTo(Institution::class);
-    }
-
     public function category(): BelongsTo
     {
         return $this->belongsTo(AccountCategory::class, 'account_category_id');
+    }
+
+    public function uniqueIds(): array
+    {
+        return ['ulid'];
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'ulid';
     }
 }

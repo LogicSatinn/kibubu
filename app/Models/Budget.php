@@ -4,15 +4,19 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Models\Concerns\BelongsToUser;
+use App\Models\Contracts\CanBelongToUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Concerns\HasUlids;
 
-class Budget extends Model
+
+class Budget extends Model implements CanBelongToUser
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, HasUlids, BelongsToUser;
 
     /**
      * The attributes that are mass assignable.
@@ -20,6 +24,7 @@ class Budget extends Model
      * @var array
      */
     protected $fillable = [
+        'ulid',
         'name',
         'period',
         'active',
@@ -37,11 +42,6 @@ class Budget extends Model
         'user_id' => 'integer',
     ];
 
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
-
     public function autoBudgets(): HasMany
     {
         return $this->hasMany(AutoBudget::class);
@@ -50,5 +50,15 @@ class Budget extends Model
     public function budgetLimits(): HasMany
     {
         return $this->hasMany(BudgetLimit::class);
+    }
+
+    public function uniqueIds(): array
+    {
+        return ['ulid'];
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'ulid';
     }
 }

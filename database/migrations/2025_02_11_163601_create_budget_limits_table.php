@@ -17,12 +17,16 @@ return new class() extends Migration
 
         Schema::create('budget_limits', function (Blueprint $table): void {
             $table->id();
+            $table->ulid();
+
             $table->decimal('amount', 11, 2);
             $table->string('currency', 3);
             $table->date('start_date');
             $table->date('end_date');
+
             $table->foreignId('budget_id')->constrained();
             $table->foreignId('user_id')->constrained();
+
             $table->timestamps();
         });
 

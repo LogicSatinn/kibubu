@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Models\Concerns\BelongsToUser;
+use App\Models\Contracts\CanBelongToUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class BudgetLimit extends Model
+class BudgetLimit extends Model implements CanBelongToUser
 {
-    use HasFactory;
+    use HasFactory, BelongsToUser;
 
     /**
      * The attributes that are mass assignable.
@@ -39,11 +41,6 @@ class BudgetLimit extends Model
         'budget_id' => 'integer',
         'user_id' => 'integer',
     ];
-
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
 
     public function budget(): BelongsTo
     {
