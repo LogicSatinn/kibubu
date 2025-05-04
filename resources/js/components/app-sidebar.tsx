@@ -1,10 +1,9 @@
-import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
 import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
-import type { NavGroup, NavItem } from '@/types';
+import type { NavGroup } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, CalculatorIcon, Folder, LayoutGrid } from 'lucide-react';
+import { CalculatorIcon, CreditCardIcon, FileTextIcon, LayoutGrid, ListTreeIcon, PiggyBankIcon, ReceiptTextIcon, RepeatIcon } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavGroups: NavGroup[] = [
@@ -29,12 +28,12 @@ const mainNavGroups: NavGroup[] = [
             {
                 title: 'Piggy Bank',
                 href: '/piggy-banks',
-                icon: CalculatorIcon,
+                icon: PiggyBankIcon,
             },
             {
                 title: 'Subscriptions',
                 href: '/subscriptions',
-                icon: CalculatorIcon,
+                icon: RepeatIcon,
             },
         ],
     },
@@ -44,23 +43,30 @@ const mainNavGroups: NavGroup[] = [
             {
                 title: 'Transactions',
                 href: '/transactions',
-                icon: CalculatorIcon,
+                icon: ReceiptTextIcon,
+            },
+        ]
+    },
+    {
+        title: 'Configuration & Reports',
+        items: [
+            {
+                title: 'Accounts',
+                href: '/accounts',
+                icon: CreditCardIcon,
+            },
+            {
+                title: 'Account Categories',
+                href: '/categories',
+                icon: ListTreeIcon,
+            },
+            {
+                title: 'Reports',
+                href: '/reports',
+                icon: FileTextIcon
             },
         ]
     }
-]
-
-const footerNavItems: NavItem[] = [
-    {
-        title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
-    },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
-    },
 ];
 
 export function AppSidebar() {
@@ -83,7 +89,7 @@ export function AppSidebar() {
             </SidebarContent>
 
             <SidebarFooter>
-                <NavFooter items={footerNavItems} className="mt-auto" />
+                {/* <NavFooter items={footerNavItems} className="mt-auto" /> */}
                 <NavUser />
             </SidebarFooter>
         </Sidebar>

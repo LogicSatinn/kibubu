@@ -22,7 +22,6 @@ return new class() extends Migration
             $table->string('name', 100);
             $table->boolean('auto_generated')->default(false);
             $table->string('color', 50)->nullable();
-            $table->string('account_number', 50)->nullable();
             $table->decimal('interest_rate', 5, 2)->nullable();
             $table->mediumText('description')->nullable();
 

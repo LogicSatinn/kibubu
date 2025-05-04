@@ -4,21 +4,30 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Data\AccountCategoryData;
+use App\Data\AccountData;
 use App\Http\Requests\AccountStoreRequest;
 use App\Http\Requests\AccountUpdateRequest;
 use App\Models\Account;
+use App\Models\AccountCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class AccountController extends Controller
 {
-    public function index(Request $request): View
+    public function index(Request $request): Response
     {
-        $accounts = Account::all();
+        $categories = AccountCategory::query()
+            ->with('accounts')
+            ->whereBelongsTo($request->user())
+            ->get()
+            ->map(fn(AccountCategory $category): AccountCategoryData => AccountCategoryData::from($category));
 
-        return view('account.index', [
-            'accounts' => $accounts,
+        return Inertia::render('accounts/index', [
+            'categories' => $categories,
         ]);
     }
 

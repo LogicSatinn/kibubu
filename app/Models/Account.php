@@ -29,7 +29,6 @@ class Account extends Model implements CanBelongToUser, CanBelongToInstitution
         'name',
         'color',
         'auto_generated',
-        'account_number',
         'balance',
         'interest_rate',
         'description',
@@ -56,7 +55,6 @@ class Account extends Model implements CanBelongToUser, CanBelongToInstitution
     protected $casts = [
         'id' => 'integer',
         'auto_generated' => 'boolean',
-        'type' => AccountType::class,
         'balance' => 'decimal:2',
         'interest_rate' => 'decimal:2',
         'user_id' => 'integer',
