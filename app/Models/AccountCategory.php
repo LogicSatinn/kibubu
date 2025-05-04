@@ -38,4 +38,14 @@ class AccountCategory extends Model implements CanBelongToUser
     {
         return $this->hasMany(Account::class, 'account_category_id');
     }
+
+    public function uniqueIds(): array
+    {
+        return ['ulid'];
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'ulid';
+    }
 }
