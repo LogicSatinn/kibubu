@@ -1,0 +1,77 @@
+import { jsxs, jsx } from "react/jsx-runtime";
+import { B as Button } from "./app-logo-icon-CoogQ1E6.js";
+import { C as Card, a as CardHeader, b as CardTitle, c as CardDescription, d as CardContent } from "./card-CYsAuzCU.js";
+import { D as Dialog, a as DialogTrigger, b as DialogContent, c as DialogHeader, d as DialogTitle, e as DialogDescription } from "./dialog-B3STjhT_.js";
+import { T as Table, a as TableCaption, b as TableHeader, c as TableRow, d as TableHead, e as TableBody, f as TableCell } from "./table-B0hyTLI9.js";
+import { A as AppLayout } from "./app-layout-CsxcoX-F.js";
+import { Head } from "@inertiajs/react";
+import { PlusIcon } from "lucide-react";
+import "@radix-ui/react-slot";
+import "class-variance-authority";
+import "clsx";
+import "tailwind-merge";
+import "@radix-ui/react-dialog";
+import "react";
+import "@radix-ui/react-tooltip";
+import "@radix-ui/react-dropdown-menu";
+import "@radix-ui/react-avatar";
+const breadcrumbs = [
+  {
+    title: "Dashboard",
+    href: "/dashboard"
+  },
+  {
+    title: "Accounts",
+    href: "/accounts"
+  }
+];
+function Accounts({ categories }) {
+  console.log(categories);
+  return /* @__PURE__ */ jsxs(AppLayout, { breadcrumbs, children: [
+    /* @__PURE__ */ jsx(Head, { title: "Accounts" }),
+    /* @__PURE__ */ jsx("section", { className: "flex h-full flex-1 flex-col gap-4 rounded-xl p-4", children: categories.map((category) => /* @__PURE__ */ jsxs(Card, { children: [
+      /* @__PURE__ */ jsxs(CardHeader, { className: "flex flex-row items-center justify-between", children: [
+        /* @__PURE__ */ jsxs("div", { children: [
+          /* @__PURE__ */ jsx(CardTitle, { children: category.name }),
+          /* @__PURE__ */ jsxs(CardDescription, { children: [
+            "Manage accounts in ",
+            category.name,
+            "."
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxs(Dialog, { children: [
+          /* @__PURE__ */ jsx(DialogTrigger, { asChild: true, children: /* @__PURE__ */ jsxs(Button, { variant: "default", children: [
+            /* @__PURE__ */ jsx(PlusIcon, { className: "size-4" }),
+            "Add Account"
+          ] }) }),
+          /* @__PURE__ */ jsx(DialogContent, { children: /* @__PURE__ */ jsxs(DialogHeader, { children: [
+            /* @__PURE__ */ jsx(DialogTitle, { className: "leading-4 tracking-tight", children: "New Account" }),
+            /* @__PURE__ */ jsxs(DialogDescription, { children: [
+              "Add an account to ",
+              category.name,
+              "."
+            ] })
+          ] }) })
+        ] }, category.ulid)
+      ] }),
+      /* @__PURE__ */ jsx(CardContent, { className: "", children: /* @__PURE__ */ jsx("div", { className: "px-0 pb-4 border border-zinc-200 rounded-lg shadow-xs overflow-hidden dark:border-zinc-800 dark:shadow-zinc-900", children: /* @__PURE__ */ jsxs(Table, { className: "min-w-full", children: [
+        /* @__PURE__ */ jsxs(TableCaption, { children: [
+          "A list of your accounts in ",
+          category.name,
+          "."
+        ] }),
+        /* @__PURE__ */ jsx(TableHeader, { className: "bg-zinc-50 dark:bg-zinc-900", children: /* @__PURE__ */ jsxs(TableRow, { children: [
+          /* @__PURE__ */ jsx(TableHead, { className: "px-6 py-3 text-start text-xs font-medium text-zinc-500 uppercase dark:text-zinc-400", children: "Name" }),
+          /* @__PURE__ */ jsx(TableHead, { className: "px-6 py-3 text-start text-xs font-medium text-zinc-500 uppercase dark:text-zinc-400", children: "Balance" })
+        ] }) }),
+        /* @__PURE__ */ jsx(TableBody, { children: category.accounts.map((account) => /* @__PURE__ */ jsxs(TableRow, { children: [
+          /* @__PURE__ */ jsx(TableCell, { className: "px-6 py-3 text-start text-xs font-medium text-zinc-700 dark:text-zinc-400", children: account.name }),
+          /* @__PURE__ */ jsx(TableCell, { className: "px-6 py-3 text-start text-xs font-medium text-zinc-700 dark:text-zinc-400", children: account.balance })
+        ] }, account.ulid)) })
+      ] }) }) })
+    ] }, category.ulid)) })
+  ] });
+}
+export {
+  Accounts as default
+};

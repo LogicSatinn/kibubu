@@ -1,14 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Data;
 
 use App\Enums\AccountType;
 use App\Models\Account;
+use App\Models\AccountCategory;
 use Illuminate\Support\Collection;
 use Spatie\LaravelData\Data;
-use App\Models\AccountCategory;
-use Spatie\TypeScriptTransformer\Attributes\TypeScript;
 use Spatie\TypeScriptTransformer\Attributes\LiteralTypeScriptType;
+use Spatie\TypeScriptTransformer\Attributes\TypeScript;
 
 #[TypeScript('AccountCategory')]
 class AccountCategoryData extends Data
@@ -19,7 +21,7 @@ class AccountCategoryData extends Data
         public AccountType $type,
         public string $color,
         /** @var Collection<int, AccountData> */
-        #[LiteralTypeScriptType("Account[]")]
+        #[LiteralTypeScriptType('Account[]')]
         public ?Collection $accounts = null,
     ) {}
 
@@ -31,7 +33,7 @@ class AccountCategoryData extends Data
             type: $category->type,
             color: $category->color,
             accounts: filled($category->accounts)
-                ? $category->accounts->map(fn(Account $account): AccountData => AccountData::from($account))
+                ? $category->accounts->map(fn (Account $account): AccountData => AccountData::from($account))
                 : null
         );
     }

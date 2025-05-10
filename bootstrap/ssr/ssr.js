@@ -339,19 +339,18 @@ function T(t4, e2, r2, n2) {
   const o2 = new N(t4, e2, r2, n2);
   return t4 ? o2.toString() : o2;
 }
-const appName = "Laravel";
+const appName = "Kibubu";
 createServer(
   (page) => createInertiaApp({
     page,
     render: ReactDOMServer.renderToString,
     title: (title) => `${title} - ${appName}`,
-    resolve: (name) => resolvePageComponent(
-      `./Pages/${name}.tsx`,
-      /* @__PURE__ */ Object.assign({ "./Pages/Auth/ConfirmPassword.tsx": () => import("./assets/ConfirmPassword-BLZtlO0j.js"), "./Pages/Auth/ForgotPassword.tsx": () => import("./assets/ForgotPassword-D1onZSBR.js"), "./Pages/Auth/Login.tsx": () => import("./assets/Login-CFJgPzXN.js"), "./Pages/Auth/Register.tsx": () => import("./assets/Register-CIp978LU.js"), "./Pages/Auth/ResetPassword.tsx": () => import("./assets/ResetPassword-DCbf8v9x.js"), "./Pages/Auth/VerifyEmail.tsx": () => import("./assets/VerifyEmail-WpRxVlhH.js"), "./Pages/Dashboard.tsx": () => import("./assets/Dashboard-CvtEaqoa.js"), "./Pages/Index.tsx": () => import("./assets/Index-CN29M8km.js"), "./Pages/Profile/Edit.tsx": () => import("./assets/Edit-irLUAZyn.js"), "./Pages/Profile/Partials/DeleteUserForm.tsx": () => import("./assets/DeleteUserForm-CRyoRFsl.js"), "./Pages/Profile/Partials/UpdatePasswordForm.tsx": () => import("./assets/UpdatePasswordForm-5tiidph4.js"), "./Pages/Profile/Partials/UpdateProfileInformationForm.tsx": () => import("./assets/UpdateProfileInformationForm-DLc8-kkN.js"), "./Pages/Welcome.tsx": () => import("./assets/Welcome-By_mvvLX.js") })
-    ),
+    resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./pages/accounts/index.tsx": () => import("./assets/index-q_8UsjDC.js"), "./pages/auth/confirm-password.tsx": () => import("./assets/confirm-password-aCS7kTyD.js"), "./pages/auth/forgot-password.tsx": () => import("./assets/forgot-password-ZKPcDe8l.js"), "./pages/auth/login.tsx": () => import("./assets/login-DMkkyyMO.js"), "./pages/auth/register.tsx": () => import("./assets/register-6IDmCkPU.js"), "./pages/auth/reset-password.tsx": () => import("./assets/reset-password-CnURZKyc.js"), "./pages/auth/verify-email.tsx": () => import("./assets/verify-email-CLJUtSu8.js"), "./pages/budgets/index.tsx": () => import("./assets/index-BPE-5_d2.js"), "./pages/dashboard.tsx": () => import("./assets/dashboard-CP56BBln.js"), "./pages/piggy-banks/index.tsx": () => import("./assets/index-Fs5O4aJX.js"), "./pages/settings/appearance.tsx": () => import("./assets/appearance-8teDOm7V.js"), "./pages/settings/password.tsx": () => import("./assets/password--jirwbYt.js"), "./pages/settings/profile.tsx": () => import("./assets/profile-CITPnhgr.js"), "./pages/subscriptions/index.tsx": () => import("./assets/index-ZXW7n52w.js"), "./pages/welcome.tsx": () => import("./assets/welcome-CtPb_rEB.js") })),
     setup: ({ App, props }) => {
       global.route = (name, params, absolute) => T(name, params, absolute, {
+        // @ts-expect-error
         ...page.props.ziggy,
+        // @ts-expect-error
         location: new URL(page.props.ziggy.location)
       });
       return /* @__PURE__ */ jsx(App, { ...props });

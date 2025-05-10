@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Data\AccountCategoryData;
-use App\Data\AccountData;
 use App\Http\Requests\AccountStoreRequest;
 use App\Http\Requests\AccountUpdateRequest;
 use App\Models\Account;
@@ -24,7 +23,7 @@ class AccountController extends Controller
             ->with('accounts')
             ->whereBelongsTo($request->user())
             ->get()
-            ->map(fn(AccountCategory $category): AccountCategoryData => AccountCategoryData::from($category));
+            ->map(fn (AccountCategory $category): AccountCategoryData => AccountCategoryData::from($category));
 
         return Inertia::render('accounts/index', [
             'categories' => $categories,

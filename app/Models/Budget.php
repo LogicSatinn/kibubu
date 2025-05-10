@@ -6,17 +6,15 @@ namespace App\Models;
 
 use App\Models\Concerns\BelongsToUser;
 use App\Models\Contracts\CanBelongToUser;
+use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Concerns\HasUlids;
-
 
 class Budget extends Model implements CanBelongToUser
 {
-    use HasFactory, SoftDeletes, HasUlids, BelongsToUser;
+    use BelongsToUser, HasFactory, HasUlids, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.

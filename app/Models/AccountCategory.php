@@ -9,12 +9,11 @@ use App\Models\Concerns\BelongsToUser;
 use App\Models\Contracts\CanBelongToUser;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class AccountCategory extends Model implements CanBelongToUser
 {
-    use HasUlids, BelongsToUser;
+    use BelongsToUser, HasUlids;
 
     /**
      * @var array

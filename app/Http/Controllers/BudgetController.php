@@ -21,7 +21,7 @@ class BudgetController extends Controller
     public function index(): Response
     {
         return Inertia::render('budgets/index', [
-            'budgets' => Budget::all()
+            'budgets' => Budget::all(),
         ]);
     }
 

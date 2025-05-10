@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class AutoBudget extends Model implements CanBelongToUser
 {
-    use HasFactory, SoftDeletes, HasUlids, BelongsToUser;
+    use BelongsToUser, HasFactory, HasUlids, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use App\Enums\AccountType;
 use App\Models\Concerns\BelongsToInstitution;
 use App\Models\Concerns\BelongsToUser;
 use App\Models\Contracts\CanBelongToInstitution;
@@ -15,9 +14,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Account extends Model implements CanBelongToUser, CanBelongToInstitution
+class Account extends Model implements CanBelongToInstitution, CanBelongToUser
 {
-    use HasFactory, SoftDeletes, HasUlids, BelongsToUser, BelongsToInstitution;
+    use BelongsToInstitution, BelongsToUser, HasFactory, HasUlids, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.

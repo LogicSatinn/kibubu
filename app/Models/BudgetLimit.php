@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class BudgetLimit extends Model implements CanBelongToUser
 {
-    use HasFactory, BelongsToUser;
+    use BelongsToUser, HasFactory;
 
     /**
      * The attributes that are mass assignable.
