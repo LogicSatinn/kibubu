@@ -1,11 +1,11 @@
 import { jsxs, jsx } from "react/jsx-runtime";
 import { useId } from "react";
-import { A as AppLayout } from "./app-layout-CsxcoX-F.js";
+import { A as AppLayout } from "./app-layout-6OR4gjYq.js";
 import { Head } from "@inertiajs/react";
 import "@radix-ui/react-slot";
 import "class-variance-authority";
 import "lucide-react";
-import "./app-logo-icon-CoogQ1E6.js";
+import "./app-logo-icon-TPTspilT.js";
 import "clsx";
 import "tailwind-merge";
 import "@radix-ui/react-dialog";

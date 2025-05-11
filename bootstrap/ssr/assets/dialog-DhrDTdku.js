@@ -1,7 +1,7 @@
 import { jsx, jsxs } from "react/jsx-runtime";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
-import { c as cn } from "./app-logo-icon-CoogQ1E6.js";
+import { c as cn } from "./app-logo-icon-TPTspilT.js";
 function Dialog({
   ...props
 }) {

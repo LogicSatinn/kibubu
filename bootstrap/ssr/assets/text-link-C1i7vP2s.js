@@ -1,5 +1,5 @@
 import { jsx } from "react/jsx-runtime";
-import { c as cn } from "./app-logo-icon-CoogQ1E6.js";
+import { c as cn } from "./app-logo-icon-TPTspilT.js";
 import { Link } from "@inertiajs/react";
 function TextLink({ className = "", children, ...props }) {
   return /* @__PURE__ */ jsx(

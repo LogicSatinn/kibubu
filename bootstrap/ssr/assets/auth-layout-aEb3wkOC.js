@@ -1,6 +1,6 @@
 import { jsx, jsxs } from "react/jsx-runtime";
-import { A as AppLogoIcon } from "./app-logo-icon-CoogQ1E6.js";
-import { C as Card, a as CardHeader, b as CardTitle, c as CardDescription, d as CardContent } from "./card-CYsAuzCU.js";
+import { A as AppLogoIcon } from "./app-logo-icon-TPTspilT.js";
+import { C as Card, a as CardHeader, b as CardTitle, c as CardDescription, d as CardContent } from "./card-wPEM5UKx.js";
 import { Link } from "@inertiajs/react";
 function AuthCardLayout({
   children,

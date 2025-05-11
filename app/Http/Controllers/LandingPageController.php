@@ -10,6 +10,6 @@ class LandingPageController extends Controller
 {
     public function __invoke(): \Inertia\Response
     {
-        return Inertia::render('Index');
+        return Inertia::render('index');
     }
 }

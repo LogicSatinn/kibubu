@@ -1,10 +1,10 @@
 import { jsx, jsxs } from "react/jsx-runtime";
 import { Head } from "@inertiajs/react";
 import { useState, useCallback, useEffect } from "react";
-import { c as cn } from "./app-logo-icon-CoogQ1E6.js";
+import { c as cn } from "./app-logo-icon-TPTspilT.js";
 import { Sun, Moon, Monitor } from "lucide-react";
-import { S as SettingsLayout, H as HeadingSmall } from "./layout-DfozhoW5.js";
-import { A as AppLayout } from "./app-layout-CsxcoX-F.js";
+import { S as SettingsLayout, H as HeadingSmall } from "./layout-B7SiK_Ma.js";
+import { A as AppLayout } from "./app-layout-6OR4gjYq.js";
 import "@radix-ui/react-slot";
 import "class-variance-authority";
 import "clsx";

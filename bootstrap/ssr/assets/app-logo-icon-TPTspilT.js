@@ -49,7 +49,7 @@ function Button({
   );
 }
 function AppLogoIcon(props) {
-  return /* @__PURE__ */ jsx("svg", { ...props, viewBox: "0 0 40 42", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ jsx(
+  return /* @__PURE__ */ jsx("svg", { ...props, role: "img", "aria-label": "logo", viewBox: "0 0 40 42", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ jsx(
     "path",
     {
       fillRule: "evenodd",

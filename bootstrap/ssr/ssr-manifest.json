@@ -1,175 +1,195 @@
 {
   "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
+  "resources/images/dash.webp": [
+    "/build/assets/index-B8h3WvAy.js",
+    "/build/assets/dash-Dr2v5ulm.webp",
+    "/build/assets/kibubu-D9GceQSf.png"
+  ],
+  "resources/images/kibubu.png": [
+    "/build/assets/index-B8h3WvAy.js",
+    "/build/assets/dash-Dr2v5ulm.webp",
+    "/build/assets/kibubu-D9GceQSf.png"
+  ],
   "resources/js/components/app-content.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/app-logo-icon.tsx": [
-    "/build/assets/app-logo-icon-CoogQ1E6.js"
+    "/build/assets/app-logo-icon-TPTspilT.js"
   ],
   "resources/js/components/app-logo.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/app-shell.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/app-sidebar-header.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/app-sidebar.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/appearance-tabs.tsx": [
-    "/build/assets/appearance-8teDOm7V.js"
+    "/build/assets/appearance-2VZ4bxsx.js"
   ],
   "resources/js/components/breadcrumbs.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/coming-soon.tsx": [
     "/build/assets/coming-soon-BlMr3Vy_.js"
   ],
   "resources/js/components/delete-user.tsx": [
-    "/build/assets/profile-CITPnhgr.js"
+    "/build/assets/profile-DaB9A2B1.js"
   ],
   "resources/js/components/heading-small.tsx": [
-    "/build/assets/layout-DfozhoW5.js"
+    "/build/assets/layout-B7SiK_Ma.js"
   ],
   "resources/js/components/heading.tsx": [
-    "/build/assets/layout-DfozhoW5.js"
+    "/build/assets/layout-B7SiK_Ma.js"
   ],
   "resources/js/components/input-error.tsx": [
-    "/build/assets/label-CCsVgNV6.js"
+    "/build/assets/label-0Z1y2ZVz.js"
   ],
   "resources/js/components/nav-main.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/nav-user.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
+  ],
+  "resources/js/components/partials/hero-section.tsx": [
+    "/build/assets/index-B8h3WvAy.js",
+    "/build/assets/dash-Dr2v5ulm.webp",
+    "/build/assets/kibubu-D9GceQSf.png"
   ],
   "resources/js/components/text-link.tsx": [
-    "/build/assets/text-link-D9-1YxGP.js"
+    "/build/assets/text-link-C1i7vP2s.js"
   ],
   "resources/js/components/ui/avatar.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/ui/breadcrumb.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/ui/button.tsx": [
-    "/build/assets/app-logo-icon-CoogQ1E6.js"
+    "/build/assets/app-logo-icon-TPTspilT.js"
   ],
   "resources/js/components/ui/card.tsx": [
-    "/build/assets/card-CYsAuzCU.js"
+    "/build/assets/card-wPEM5UKx.js"
   ],
   "resources/js/components/ui/checkbox.tsx": [
-    "/build/assets/login-DMkkyyMO.js"
+    "/build/assets/login-C6WnSR3U.js"
   ],
   "resources/js/components/ui/dialog.tsx": [
-    "/build/assets/dialog-B3STjhT_.js"
+    "/build/assets/dialog-DhrDTdku.js"
   ],
   "resources/js/components/ui/dropdown-menu.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/ui/input.tsx": [
-    "/build/assets/label-CCsVgNV6.js"
+    "/build/assets/label-0Z1y2ZVz.js"
   ],
   "resources/js/components/ui/label.tsx": [
-    "/build/assets/label-CCsVgNV6.js"
+    "/build/assets/label-0Z1y2ZVz.js"
   ],
   "resources/js/components/ui/placeholder-pattern.tsx": [
-    "/build/assets/dashboard-CP56BBln.js"
+    "/build/assets/dashboard-CwZK7s1U.js"
   ],
   "resources/js/components/ui/separator.tsx": [
-    "/build/assets/layout-DfozhoW5.js"
+    "/build/assets/layout-B7SiK_Ma.js"
   ],
   "resources/js/components/ui/sheet.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/ui/sidebar.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/ui/table.tsx": [
-    "/build/assets/table-B0hyTLI9.js"
+    "/build/assets/table-CEyp4u6-.js"
   ],
   "resources/js/components/ui/tooltip.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/user-info.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/components/user-menu-content.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/hooks/use-appearance.tsx": [
-    "/build/assets/appearance-8teDOm7V.js"
+    "/build/assets/appearance-2VZ4bxsx.js"
   ],
   "resources/js/hooks/use-initials.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/hooks/use-mobile-navigation.ts": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/hooks/use-mobile.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/layouts/app-layout.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/layouts/app/app-sidebar-layout.tsx": [
-    "/build/assets/app-layout-CsxcoX-F.js"
+    "/build/assets/app-layout-6OR4gjYq.js"
   ],
   "resources/js/layouts/auth-layout.tsx": [
-    "/build/assets/auth-layout-XeuePwQc.js"
+    "/build/assets/auth-layout-aEb3wkOC.js"
   ],
   "resources/js/layouts/auth/auth-card-layout.tsx": [
-    "/build/assets/auth-layout-XeuePwQc.js"
+    "/build/assets/auth-layout-aEb3wkOC.js"
   ],
   "resources/js/layouts/settings/layout.tsx": [
-    "/build/assets/layout-DfozhoW5.js"
+    "/build/assets/layout-B7SiK_Ma.js"
   ],
   "resources/js/lib/utils.ts": [
-    "/build/assets/app-logo-icon-CoogQ1E6.js"
+    "/build/assets/app-logo-icon-TPTspilT.js"
   ],
   "resources/js/pages/accounts/index.tsx": [
-    "/build/assets/index-q_8UsjDC.js"
+    "/build/assets/index-QjyPwjnW.js"
   ],
   "resources/js/pages/auth/confirm-password.tsx": [
-    "/build/assets/confirm-password-aCS7kTyD.js"
+    "/build/assets/confirm-password-CFuWNYwv.js"
   ],
   "resources/js/pages/auth/forgot-password.tsx": [
-    "/build/assets/forgot-password-ZKPcDe8l.js"
+    "/build/assets/forgot-password-C1yWYqXc.js"
   ],
   "resources/js/pages/auth/login.tsx": [
-    "/build/assets/login-DMkkyyMO.js"
+    "/build/assets/login-C6WnSR3U.js"
   ],
   "resources/js/pages/auth/register.tsx": [
-    "/build/assets/register-6IDmCkPU.js"
+    "/build/assets/register-aLshhUYf.js"
   ],
   "resources/js/pages/auth/reset-password.tsx": [
-    "/build/assets/reset-password-CnURZKyc.js"
+    "/build/assets/reset-password-BGrYCUpE.js"
   ],
   "resources/js/pages/auth/verify-email.tsx": [
-    "/build/assets/verify-email-CLJUtSu8.js"
+    "/build/assets/verify-email-D38tHwWt.js"
   ],
   "resources/js/pages/budgets/index.tsx": [
-    "/build/assets/index-BPE-5_d2.js"
+    "/build/assets/index-DTlYe4zA.js"
   ],
   "resources/js/pages/dashboard.tsx": [
-    "/build/assets/dashboard-CP56BBln.js"
+    "/build/assets/dashboard-CwZK7s1U.js"
+  ],
+  "resources/js/pages/index.tsx": [
+    "/build/assets/index-B8h3WvAy.js",
+    "/build/assets/dash-Dr2v5ulm.webp",
+    "/build/assets/kibubu-D9GceQSf.png"
   ],
   "resources/js/pages/piggy-banks/index.tsx": [
-    "/build/assets/index-Fs5O4aJX.js"
+    "/build/assets/index-CxACsSlX.js"
   ],
   "resources/js/pages/settings/appearance.tsx": [
-    "/build/assets/appearance-8teDOm7V.js"
+    "/build/assets/appearance-2VZ4bxsx.js"
   ],
   "resources/js/pages/settings/password.tsx": [
-    "/build/assets/password--jirwbYt.js"
+    "/build/assets/password-BcXa-dH3.js"
   ],
   "resources/js/pages/settings/profile.tsx": [
-    "/build/assets/profile-CITPnhgr.js"
+    "/build/assets/profile-DaB9A2B1.js"
   ],
   "resources/js/pages/subscriptions/index.tsx": [
-    "/build/assets/index-ZXW7n52w.js"
+    "/build/assets/index-D3WSdvqP.js"
   ],
   "resources/js/pages/welcome.tsx": [
     "/build/assets/welcome-CtPb_rEB.js"

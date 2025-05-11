@@ -1,11 +1,11 @@
 import { jsxs, jsx } from "react/jsx-runtime";
-import { L as Label, I as Input, a as InputError } from "./label-CCsVgNV6.js";
-import { A as AppLayout } from "./app-layout-CsxcoX-F.js";
-import { S as SettingsLayout, H as HeadingSmall } from "./layout-DfozhoW5.js";
+import { L as Label, I as Input, a as InputError } from "./label-0Z1y2ZVz.js";
+import { A as AppLayout } from "./app-layout-6OR4gjYq.js";
+import { S as SettingsLayout, H as HeadingSmall } from "./layout-B7SiK_Ma.js";
 import { Transition } from "@headlessui/react";
 import { useForm, Head } from "@inertiajs/react";
 import { useRef } from "react";
-import { B as Button } from "./app-logo-icon-CoogQ1E6.js";
+import { B as Button } from "./app-logo-icon-TPTspilT.js";
 import "@radix-ui/react-label";
 import "@radix-ui/react-slot";
 import "class-variance-authority";

@@ -1,16 +1,16 @@
 import { jsxs, jsx } from "react/jsx-runtime";
 import { useForm, Head } from "@inertiajs/react";
 import { LoaderCircle } from "lucide-react";
-import { L as Label, I as Input, a as InputError } from "./label-CCsVgNV6.js";
-import { T as TextLink } from "./text-link-D9-1YxGP.js";
-import { B as Button } from "./app-logo-icon-CoogQ1E6.js";
-import { A as AuthLayout } from "./auth-layout-XeuePwQc.js";
+import { L as Label, I as Input, a as InputError } from "./label-0Z1y2ZVz.js";
+import { T as TextLink } from "./text-link-C1i7vP2s.js";
+import { B as Button } from "./app-logo-icon-TPTspilT.js";
+import { A as AuthLayout } from "./auth-layout-aEb3wkOC.js";
 import "@radix-ui/react-label";
 import "@radix-ui/react-slot";
 import "class-variance-authority";
 import "clsx";
 import "tailwind-merge";
-import "./card-CYsAuzCU.js";
+import "./card-wPEM5UKx.js";
 function ForgotPassword({ status }) {
   const { data, setData, post, processing, errors } = useForm({
     email: ""

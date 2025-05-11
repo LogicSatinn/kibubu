@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, Fragment as Fragment$1 } from "react"
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 import { XIcon, PanelLeftIcon, Settings, LogOut, ChevronsUpDown, LayoutGrid, CalculatorIcon, PiggyBankIcon, RepeatIcon, ReceiptTextIcon, CreditCardIcon, ListTreeIcon, FileTextIcon, ChevronRight } from "lucide-react";
-import { c as cn, B as Button, A as AppLogoIcon } from "./app-logo-icon-CoogQ1E6.js";
+import { c as cn, B as Button, A as AppLogoIcon } from "./app-logo-icon-TPTspilT.js";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { usePage, Link, router } from "@inertiajs/react";

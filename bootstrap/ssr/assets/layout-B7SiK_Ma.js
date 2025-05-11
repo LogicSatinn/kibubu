@@ -1,5 +1,5 @@
 import { jsx, jsxs } from "react/jsx-runtime";
-import { c as cn, B as Button } from "./app-logo-icon-CoogQ1E6.js";
+import { c as cn, B as Button } from "./app-logo-icon-TPTspilT.js";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 import { Link } from "@inertiajs/react";
 function Separator({
