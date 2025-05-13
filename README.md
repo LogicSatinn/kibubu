@@ -1,3 +1,3 @@
-# Kibobo
+# Kibubu
 
 A budgeting app.
